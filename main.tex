@@ -8,17 +8,21 @@
 
 \usepackage[utf8]{inputenc}
 
-\title{Resume}
+\usepackage[margin=0.25in]{geometry}
 
-\author{Mozilla Club of UCSC}
+\title{Yash Kurkure}
+\date{}
 
-\date{2020–12–10}
-
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@maketitle}{\null\vskip 2em}{}{}{}
+\makeatother
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
+
+\section*{Introduction}
 
 Here is the introduction of our text
 
