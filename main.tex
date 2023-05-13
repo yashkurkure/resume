@@ -1,39 +1,40 @@
 \documentclass[12pt]{article}
-
-\usepackage{amsmath}
-
-\usepackage{graphicx}
-
-\usepackage{hyperref}
-
-\usepackage[utf8]{inputenc}
-
 \usepackage[margin=0.25in]{geometry}
+\usepackage{tabularx}
 
-\title{Yash Kurkure}
+
+% Name
+% \vspace removes the space after the title
+\title{Yash Kurkure\vspace{-3em}}
+
+% No date
 \date{}
 
+%------------------------------------------------------------------
 \usepackage{etoolbox}
+%In summary, this code snippet removes the \null\vskip 2em from 
+%the \@maketitle command, effectively reducing the vertical space
+%that is added by default after the title in a LaTeX document.
 \makeatletter
 \patchcmd{\@maketitle}{\null\vskip 2em}{}{}{}
 \makeatother
+%------------------------------------------------------------------
+
 \begin{document}
 
 \maketitle
+\par\noindent\rule{\textwidth}{0.4pt}
 
 
-\section*{Introduction}
+\section*{Education}
 
-Here is the introduction of our text
-
-\begin{itemize}
-
-\item One
-
-\item Two
-
-\item Three
-
-\end{itemize}
-
+\subsection*{University of Illinois at Chicago}
+% The column specifier lXr defines the alignment of the columns: 
+%l - the first column is left-aligned, 
+%X - the second column is stretched to fill the available space, 
+%r - and the third column is right-aligned.
+\begin{tabularx}{\textwidth}{l@{\hskip 2.5in}Xr}
+	MS in Computer Science & GPA: 4.0/4.0 & 2022-23 \\
+	BS in Computer Science & GPA: 3.96/4.0 & 2019-22 \\
+\end{tabularx}
 \end{document}
